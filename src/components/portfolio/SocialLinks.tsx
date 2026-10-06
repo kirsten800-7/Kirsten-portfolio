@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { socialLinks } from "./data";
 
-/** Compact icon-only chips — used in the header and footer. */
+/** Compact icon-only chips — used in the header, hero and footer. */
 export function SocialChips({
   className,
   size = "md",
@@ -23,7 +23,7 @@ export function SocialChips({
               aria-label={social.label}
               title={`${social.label} · ${social.handle}`}
               className={cn(
-                "glass-soft flex items-center justify-center rounded-full text-slate-600 transition duration-300 hover:-translate-y-0.5 hover:border-white/80 hover:bg-white/75 focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none",
+                "glass-soft flex items-center justify-center rounded-full text-white/70 transition duration-200 hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none",
                 social.chipHover,
                 size === "sm" ? "size-9" : "size-10",
               )}
@@ -49,25 +49,25 @@ export function SocialCards({ className }: { className?: string }) {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass glass-hover group flex items-center gap-3 rounded-2xl px-4 py-3.5"
+              className="glass glass-hover group flex items-center gap-3 rounded-2xl px-4 py-3.5 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none"
             >
               <span
                 className={cn(
-                  "flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/70 text-slate-700 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition duration-300 group-hover:scale-105",
+                  "flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.06] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition duration-200",
                   social.cardHover,
                 )}
               >
                 <Icon className="size-[18px]" />
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block text-sm font-semibold text-slate-800">
+                <span className="block text-sm font-semibold text-white">
                   {social.label}
                 </span>
-                <span className="block truncate text-xs text-slate-500">
+                <span className="block truncate text-xs text-white/56">
                   {social.handle}
                 </span>
               </span>
-              <ArrowUpRight className="size-4 shrink-0 text-slate-400 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-slate-700" />
+              <ArrowUpRight className="size-4 shrink-0 text-white/48 transition duration-200 group-hover:text-white" />
             </a>
           </li>
         );

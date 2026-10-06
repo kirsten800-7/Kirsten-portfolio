@@ -11,7 +11,7 @@ import { profile } from "./data";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const fieldClasses =
-  "h-11 rounded-xl border-white/60 bg-white/55 shadow-none backdrop-blur-md placeholder:text-slate-400 focus-visible:border-sky-300/70 focus-visible:ring-2 focus-visible:ring-sky-400/40";
+  "h-11 rounded-xl border-white/[0.12] bg-white/[0.04] text-white shadow-none placeholder:text-white/56 focus-visible:border-white/30 focus-visible:ring-2 focus-visible:ring-white/20";
 
 export function ContactSection() {
   const [status, setStatus] = useState<Status>("idle");
@@ -61,10 +61,10 @@ export function ContactSection() {
         eyebrow="Contact"
         title={
           <>
-            Let&apos;s talk about <span className="text-cool">the work</span>
+            Get in touch — <span className="text-cool">I read everything</span>
           </>
         }
-        description="Send a short brief and I'll reply within two business days. Contract work, collaborations and focused consulting are all welcome."
+        description="Feedback, advice, a question, or just a hello. The form goes straight to my inbox, and I reply within a couple of days."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -73,7 +73,7 @@ export function ContactSection() {
             <form onSubmit={handleSubmit} className="grid gap-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="grid gap-2">
-                  <Label htmlFor="name" className="text-slate-700">
+                  <Label htmlFor="name" className="text-white/76">
                     Name
                   </Label>
                   <Input
@@ -86,7 +86,7 @@ export function ContactSection() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="email" className="text-slate-700">
+                  <Label htmlFor="email" className="text-white/76">
                     Email
                   </Label>
                   <Input
@@ -102,7 +102,7 @@ export function ContactSection() {
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="subject" className="text-slate-700">
+                <Label htmlFor="subject" className="text-white/76">
                   Subject
                 </Label>
                 <Input
@@ -114,7 +114,7 @@ export function ContactSection() {
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="message" className="text-slate-700">
+                <Label htmlFor="message" className="text-white/76">
                   Message
                 </Label>
                 <Textarea
@@ -122,7 +122,7 @@ export function ContactSection() {
                   name="message"
                   required
                   rows={5}
-                  placeholder="A few lines about the project, timeline and budget…"
+                  placeholder="What's on your mind?"
                   className={cn(fieldClasses, "h-auto min-h-32 py-3")}
                 />
               </div>
@@ -136,13 +136,17 @@ export function ContactSection() {
                 aria-hidden="true"
                 className="hidden"
               />
-              <input type="hidden" name="_subject" value="New portfolio message" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from Kirsten Portfolio"
+              />
 
               <div className="flex flex-wrap items-center gap-4">
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="group inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white shadow-[0_16px_34px_-18px_rgba(15,23,42,0.95)] transition duration-300 hover:-translate-y-0.5 hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-sky-500/60 focus-visible:outline-none disabled:translate-y-0 disabled:opacity-70"
+                  className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-900 shadow-[0_14px_30px_-18px_rgba(0,0,0,1)] transition duration-200 hover:bg-white/90 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none disabled:opacity-60"
                 >
                   {status === "submitting" ? (
                     <>
@@ -152,7 +156,7 @@ export function ContactSection() {
                   ) : (
                     <>
                       Send message
-                      <Send className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      <Send className="size-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                     </>
                   )}
                 </button>
@@ -160,7 +164,7 @@ export function ContactSection() {
                 {status === "success" ? (
                   <p
                     role="status"
-                    className="flex items-center gap-2 text-sm font-medium text-emerald-700"
+                    className="glass-soft flex items-center gap-2 rounded-full px-3.5 py-2 text-sm font-medium text-white/92"
                   >
                     <CheckCircle2 className="size-4" />
                     Message received — I&apos;ll be in touch shortly.
@@ -170,7 +174,7 @@ export function ContactSection() {
                 {status === "error" && error ? (
                   <p
                     role="alert"
-                    className="flex items-center gap-2 text-sm font-medium text-rose-600"
+                    className="glass-soft flex items-center gap-2 rounded-full px-3.5 py-2 text-sm font-medium text-white/92"
                   >
                     <AlertCircle className="size-4" />
                     {error}
@@ -181,36 +185,36 @@ export function ContactSection() {
           </GlassCard>
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <Reveal delay={0.08}>
           <div className="grid gap-6">
             <GlassCard className="p-6 sm:p-7">
-              <p className="text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
+              <p className="text-xs font-medium tracking-[0.16em] text-white/56 uppercase">
                 Email
               </p>
               <a
                 href={`mailto:${profile.email}`}
-                className="mt-5 flex items-center gap-3 rounded-2xl bg-white/55 p-4 transition duration-300 hover:-translate-y-0.5 hover:bg-white/75"
+                className="mt-5 flex items-center gap-3 rounded-2xl bg-white/[0.05] p-4 transition duration-200 hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none"
               >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/75 text-slate-700 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)]">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.06] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                   <Mail className="size-4" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block text-sm font-semibold text-slate-800">
+                  <span className="block truncate text-sm font-semibold text-white">
                     {profile.email}
                   </span>
-                  <span className="block text-xs text-slate-500">
-                    Best for direct inquiries
+                  <span className="block text-xs text-white/56">
+                    Best for direct messages
                   </span>
                 </span>
               </a>
-              <p className="mt-4 text-sm leading-6 text-slate-600">
+              <p className="mt-4 text-sm leading-6 text-white/70">
                 Prefer social platforms? I&apos;m most active on Discord and
                 Instagram, and the links below go straight to my profiles.
               </p>
             </GlassCard>
 
             <div>
-              <p className="mb-3 px-1 text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
+              <p className="mb-3 px-1 text-xs font-medium tracking-[0.16em] text-white/56 uppercase">
                 Elsewhere
               </p>
               <SocialCards />

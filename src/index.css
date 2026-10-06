@@ -43,74 +43,75 @@
 }
 
 /* CHANGE VALUES FOR THEME */
-/* Light glassmorphism: bright, cool, low-chroma surfaces. */
+/* Dark monochrome glassmorphism: near-black surfaces, white-edged glass,
+   no hue anywhere — only white, grey and black. */
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.985 0.006 240);
-  --foreground: oklch(0.235 0.032 258);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.032 258);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.032 258);
-  --primary: oklch(0.555 0.152 258);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.962 0.014 245);
-  --secondary-foreground: oklch(0.29 0.035 258);
-  --muted: oklch(0.965 0.012 245);
-  --muted-foreground: oklch(0.52 0.026 256);
-  --accent: oklch(0.945 0.03 220);
-  --accent-foreground: oklch(0.3 0.05 252);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.902 0.014 250);
-  --input: oklch(0.918 0.014 250);
-  --ring: oklch(0.62 0.12 255);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.185 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.185 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.16 0 0);
+  --secondary: oklch(0.245 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.245 0 0);
+  --muted-foreground: oklch(0.72 0 0);
+  --accent: oklch(0.28 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.62 0.19 25.325);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.85 0 0);
+  --chart-1: oklch(0.9 0 0);
+  --chart-2: oklch(0.72 0 0);
+  --chart-3: oklch(0.55 0 0);
+  --chart-4: oklch(0.4 0 0);
+  --chart-5: oklch(0.28 0 0);
+  --sidebar: oklch(0.185 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(0.16 0 0);
+  --sidebar-accent: oklch(0.28 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.85 0 0);
 }
 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.185 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.185 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.16 0 0);
+  --secondary: oklch(0.245 0 0);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --muted: oklch(0.245 0 0);
+  --muted-foreground: oklch(0.72 0 0);
+  --accent: oklch(0.28 0 0);
   --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --destructive: oklch(0.62 0.19 25.325);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.85 0 0);
+  --chart-1: oklch(0.9 0 0);
+  --chart-2: oklch(0.72 0 0);
+  --chart-3: oklch(0.55 0 0);
+  --chart-4: oklch(0.4 0 0);
+  --chart-5: oklch(0.28 0 0);
+  --sidebar: oklch(0.185 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-primary: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(0.16 0 0);
+  --sidebar-accent: oklch(0.28 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.85 0 0);
 }
 
 @layer base {
@@ -119,6 +120,7 @@
   }
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
   }
   body {
     @apply bg-background text-foreground;
@@ -129,84 +131,92 @@
     cursor: pointer;
   }
   ::selection {
-    background-color: oklch(0.72 0.12 255 / 30%);
+    background-color: rgb(255 255 255 / 22%);
+    color: rgb(255 255 255 / 98%);
+  }
+  /* Motion is an enhancement here — nothing depends on it to be readable. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 }
 
 /* ------------------------------------------------------------------ */
-/* Light glassmorphism surfaces                                        */
-/* Layered translucent panels, controlled blur, subtle edge highlights */
-/* Kept in the components layer so Tailwind utilities (hover states,    */
-/* focus rings) can still override them.                                */
+/* Dark monochrome glass surfaces                                      */
+/* Bar-and-menu glass get real backdrop blur because page content      */
+/* actually scrolls behind them. Every other panel gets its depth from */
+/* layered translucency, a hairline white edge and a top highlight —   */
+/* which paints once instead of re-sampling a backdrop every frame.    */
+/* Nothing here animates a layout property; hover only moves on the    */
+/* compositor (transform / shadow / border).                           */
 /* ------------------------------------------------------------------ */
 @layer components {
-.glass {
-  background: linear-gradient(
-    145deg,
-    rgb(255 255 255 / 0.72) 0%,
-    rgb(255 255 255 / 0.46) 55%,
-    rgb(255 255 255 / 0.62) 100%
-  );
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
-  border: 1px solid rgb(255 255 255 / 0.65);
-  box-shadow:
-    0 16px 40px -26px rgb(15 23 42 / 0.22),
-    0 2px 6px -3px rgb(15 23 42 / 0.07),
-    inset 0 1px 0 rgb(255 255 255 / 0.9);
-}
+  .glass {
+    background: linear-gradient(
+      150deg,
+      rgb(255 255 255 / 0.09) 0%,
+      rgb(255 255 255 / 0.035) 55%,
+      rgb(255 255 255 / 0.06) 100%
+    );
+    border: 1px solid rgb(255 255 255 / 0.1);
+    box-shadow:
+      0 26px 60px -38px rgb(0 0 0 / 0.95),
+      inset 0 1px 0 rgb(255 255 255 / 0.1);
+  }
 
-.glass-strong {
-  background: linear-gradient(
-    145deg,
-    rgb(255 255 255 / 0.86) 0%,
-    rgb(255 255 255 / 0.64) 100%
-  );
-  backdrop-filter: blur(24px) saturate(170%);
-  -webkit-backdrop-filter: blur(24px) saturate(170%);
-  border: 1px solid rgb(255 255 255 / 0.75);
-  box-shadow:
-    0 18px 44px -28px rgb(15 23 42 / 0.24),
-    inset 0 1px 0 rgb(255 255 255 / 0.95);
-}
+  .glass-strong {
+    background: rgb(13 13 15 / 0.74);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgb(255 255 255 / 0.12);
+    box-shadow:
+      0 20px 50px -30px rgb(0 0 0 / 0.95),
+      inset 0 1px 0 rgb(255 255 255 / 0.09);
+  }
 
-.glass-soft {
-  background: linear-gradient(
-    145deg,
-    rgb(255 255 255 / 0.55) 0%,
-    rgb(255 255 255 / 0.3) 100%
-  );
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border: 1px solid rgb(255 255 255 / 0.55);
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.7);
-}
+  .glass-soft {
+    background: linear-gradient(
+      150deg,
+      rgb(255 255 255 / 0.07) 0%,
+      rgb(255 255 255 / 0.025) 100%
+    );
+    border: 1px solid rgb(255 255 255 / 0.08);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06);
+  }
 
-.glass-hover {
-  transition:
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
+  .glass-hover {
+    transition:
+      box-shadow 0.3s ease,
+      border-color 0.3s ease,
+      background-color 0.3s ease;
+  }
 
-.glass-hover:hover {
-  transform: translateY(-3px);
-  border-color: rgb(255 255 255 / 0.9);
-  box-shadow:
-    0 26px 60px -32px rgb(15 23 42 / 0.3),
-    inset 0 1px 0 rgb(255 255 255 / 1);
-}
+  .glass-hover:hover {
+    border-color: rgb(255 255 255 / 0.2);
+    background-color: rgb(255 255 255 / 0.04);
+    box-shadow:
+      0 32px 70px -40px rgb(0 0 0 / 1),
+      inset 0 1px 0 rgb(255 255 255 / 0.14);
+  }
 
-/* Muted slate-to-steel gradient: one restrained accent, nothing decorative. */
-.text-cool {
-  background: linear-gradient(
-    118deg,
-    oklch(0.26 0.03 258) 0%,
-    oklch(0.38 0.05 252) 55%,
-    oklch(0.52 0.09 244) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+  /* Monochrome accent: white fading to grey. */
+  .text-cool {
+    background: linear-gradient(
+      118deg,
+      oklch(0.99 0 0) 0%,
+      oklch(0.84 0 0) 55%,
+      oklch(0.66 0 0) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }

@@ -33,14 +33,6 @@ function useActiveSection() {
   return active;
 }
 
-function Monogram() {
-  return (
-    <span className="relative flex size-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400/90 to-indigo-500/90 text-base font-bold text-white shadow-[0_8px_20px_-8px_rgba(49,86,180,0.8),inset_0_1px_0_rgba(255,255,255,0.5)]">
-      {profile.name.charAt(0)}
-    </span>
-  );
-}
-
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const active = useActiveSection();
@@ -60,14 +52,16 @@ export function SiteHeader() {
         <a
           href="#home"
           onClick={() => setOpen(false)}
-          className="flex items-center gap-3 rounded-xl pr-2 focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
+          className="flex items-center gap-3 rounded-xl pr-2 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none"
         >
-          <Monogram />
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white text-base font-bold text-neutral-900 shadow-[0_10px_24px_-14px_rgba(0,0,0,0.9)]">
+            {profile.shortName.charAt(0)}
+          </span>
           <span className="hidden leading-tight sm:block">
-            <span className="block text-sm font-semibold tracking-tight text-slate-900">
+            <span className="block text-sm font-semibold tracking-tight text-white">
               {profile.siteName}
             </span>
-            <span className="block text-xs text-slate-500">{profile.role}</span>
+            <span className="block text-xs text-white/56">{profile.role}</span>
           </span>
         </a>
 
@@ -79,10 +73,10 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-medium transition duration-300 focus-visible:ring-2 focus-visible:ring-sky-400/50 focus-visible:outline-none",
+                  "flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-medium transition duration-200 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none",
                   isActive
-                    ? "bg-white/80 text-slate-900 shadow-[0_6px_16px_-10px_rgba(30,64,120,0.7),inset_0_1px_0_rgba(255,255,255,0.95)]"
-                    : "text-slate-600 hover:bg-white/50 hover:text-slate-900",
+                    ? "bg-white/12 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.14)]"
+                    : "text-white/70 hover:bg-white/[0.07] hover:text-white",
                 )}
               >
                 {item.label === "Home" ? <Home className="size-3.5" /> : null}
@@ -95,7 +89,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <a
             href="#contact"
-            className="hidden rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-[0_10px_24px_-12px_rgba(15,23,42,0.9)] transition duration-300 hover:-translate-y-0.5 hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-sky-500/60 focus-visible:outline-none sm:inline-flex"
+            className="hidden rounded-full bg-white px-4 py-2 text-sm font-medium text-neutral-900 shadow-[0_10px_24px_-14px_rgba(0,0,0,0.9)] transition duration-200 hover:bg-white/90 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none sm:inline-flex"
           >
             Contact
           </a>
@@ -104,7 +98,7 @@ export function SiteHeader() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
-            className="glass-soft flex size-10 items-center justify-center rounded-full text-slate-700 transition hover:bg-white/75 focus-visible:ring-2 focus-visible:ring-sky-400/50 focus-visible:outline-none lg:hidden"
+            className="glass-soft flex size-10 items-center justify-center rounded-full text-white/86 transition duration-200 hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none lg:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -115,10 +109,10 @@ export function SiteHeader() {
         {open ? (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, y: -12, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -12, scale: 0.98 }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="glass-strong mx-auto mt-3 w-full max-w-6xl origin-top overflow-hidden rounded-2xl p-4 lg:hidden"
           >
             <nav className="grid gap-1.5">
@@ -128,21 +122,21 @@ export function SiteHeader() {
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium transition focus-visible:ring-2 focus-visible:ring-sky-400/50 focus-visible:outline-none",
+                    "flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium transition duration-200 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none",
                     active === item.href
-                      ? "bg-white/80 text-slate-900"
-                      : "text-slate-600 hover:bg-white/55 hover:text-slate-900",
+                      ? "bg-white/12 text-white"
+                      : "text-white/72 hover:bg-white/[0.07] hover:text-white",
                   )}
                 >
                   {item.label}
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs text-white/56">
                     {item.href.replace("#", "")}
                   </span>
                 </a>
               ))}
             </nav>
-            <div className="mt-4 border-t border-white/60 pt-4">
-              <p className="mb-3 text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
+            <div className="mt-4 border-t border-white/10 pt-4">
+              <p className="mb-3 text-xs font-medium tracking-[0.16em] text-white/56 uppercase">
                 Elsewhere
               </p>
               <SocialChips size="sm" />

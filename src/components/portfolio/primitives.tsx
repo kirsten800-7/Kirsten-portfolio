@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -19,7 +19,10 @@ export function GlassCard({
   );
 }
 
-/** Fades + lifts content into view once, the first time it is scrolled to. */
+/**
+ * Fades + lifts content into view once, the first time it is scrolled to.
+ * Only transform and opacity animate, so it stays on the compositor.
+ */
 export function Reveal({
   children,
   delay = 0,
@@ -29,13 +32,19 @@ export function Reveal({
   delay?: number;
   className?: string;
 }) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 18 }}
+      initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.55, delay, ease: EASE }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.5, delay, ease: EASE }}
     >
       {children}
     </motion.div>
@@ -73,7 +82,7 @@ export function Eyebrow({
   return (
     <span
       className={cn(
-        "glass-soft inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium tracking-[0.16em] text-slate-500 uppercase",
+        "glass-soft inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium tracking-[0.16em] text-white/56 uppercase",
         className,
       )}
     >
@@ -101,13 +110,13 @@ export function SectionHeading({
       )}
     >
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="text-3xl font-semibold tracking-[-0.02em] text-slate-900 sm:text-[2.5rem]">
+      <h2 className="text-3xl font-semibold tracking-[-0.02em] text-white sm:text-[2.5rem]">
         {title}
       </h2>
       {description ? (
         <p
           className={cn(
-            "max-w-2xl text-base leading-7 text-slate-600",
+            "max-w-2xl text-base leading-7 text-white/70",
             align === "center" && "mx-auto",
           )}
         >
