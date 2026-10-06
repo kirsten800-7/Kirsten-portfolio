@@ -1,4 +1,5 @@
 import { ArrowUp, ArrowUpRight, Mail } from "lucide-react";
+import { LogoMark } from "./LogoMark";
 import { GlassCard } from "./primitives";
 import { SocialChips } from "./SocialLinks";
 import { navItems, profile } from "./data";
@@ -15,9 +16,7 @@ export function SiteFooter() {
               href="#home"
               className="flex items-center gap-3 rounded-xl focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none"
             >
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-white text-lg font-bold text-neutral-900 shadow-[0_14px_30px_-16px_rgba(0,0,0,1)]">
-                {profile.shortName.charAt(0)}
-              </span>
+              <LogoMark size={44} />
               <span className="leading-tight">
                 <span className="block text-base font-semibold tracking-tight text-white">
                   {profile.siteName}

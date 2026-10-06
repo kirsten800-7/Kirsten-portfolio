@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Home, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { LogoMark } from "./LogoMark";
 import { navItems, profile } from "./data";
 import { SocialChips } from "./SocialLinks";
 
@@ -54,9 +55,7 @@ export function SiteHeader() {
           onClick={() => setOpen(false)}
           className="flex items-center gap-3 rounded-xl pr-2 focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:outline-none"
         >
-          <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-white text-base font-bold text-neutral-900 shadow-[0_10px_24px_-14px_rgba(0,0,0,0.9)]">
-            {profile.shortName.charAt(0)}
-          </span>
+          <LogoMark size={40} />
           <span className="hidden leading-tight sm:block">
             <span className="block text-sm font-semibold tracking-tight text-white">
               {profile.siteName}

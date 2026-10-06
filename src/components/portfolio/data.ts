@@ -28,6 +28,11 @@ export const profile = {
     "I am starting from where I am right now \u2014 learning to build for the web, one small step at a time, and not planning to give up on it.",
   email: "hello@itsk1rsten.com",
   formspreeEndpoint: "https://formspree.io/f/xyegeoqp",
+  /** Hero portrait — swap the file (or this path) for a real photo. */
+  photoUrl: "/kirsten.png",
+  photoAlt: "Portrait of Kirsten Morante",
+  /** Square PNG mark shown in the header, footer and icon. */
+  logoUrl: "/logo.png",
 };
 
 export const navItems = [

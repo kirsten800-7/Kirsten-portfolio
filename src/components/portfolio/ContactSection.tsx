@@ -59,6 +59,7 @@ export function ContactSection() {
     <Section id="contact">
       <SectionHeading
         eyebrow="Contact"
+        align="center"
         title={
           <>
             Get in touch — <span className="text-cool">I read everything</span>

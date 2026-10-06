@@ -37,6 +37,7 @@ export function AboutSection() {
     <Section id="about">
       <SectionHeading
         eyebrow="About Me"
+        align="center"
         title={
           <>
             Starting from <span className="text-cool">where I am</span>

@@ -8,6 +8,7 @@ export function ProjectsSection() {
     <Section id="projects">
       <SectionHeading
         eyebrow="Projects"
+        align="center"
         title={
           <>
             Things I&apos;ve built while{" "}
