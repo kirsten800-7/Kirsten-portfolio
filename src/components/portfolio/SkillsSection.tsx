@@ -10,11 +10,11 @@ export function SkillsSection() {
         align="center"
         title={
           <>
-            The stack I reach for{" "}
-            <span className="text-cool">almost every day</span>
+            The tools and disciplines behind{" "}
+            <span className="text-cool">the work</span>
           </>
         }
-        description="Four buckets that cover most of what a project needs — from the first wireframe to the deploy that makes it real."
+        description="Four areas that cover most of a project, from the first wireframe through to the release that makes it real."
       />
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2">
@@ -39,12 +39,12 @@ export function SkillsSection() {
 
                 <div className="mt-6">
                   <div className="flex items-center justify-between text-xs font-medium text-slate-500">
-                    <span>Confidence</span>
+                    <span>Proficiency</span>
                     <span className="text-slate-700">{group.level}%</span>
                   </div>
-                  <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/60">
+                  <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-slate-200/70">
                     <motion.div
-                      className="h-full rounded-full bg-gradient-to-r from-sky-400 to-indigo-500"
+                      className="h-full rounded-full bg-slate-800"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${group.level}%` }}
                       viewport={{ once: true, amount: 0.4 }}
@@ -72,8 +72,8 @@ export function SkillsSection() {
       <Reveal delay={0.1}>
         <GlassCard className="mt-6 flex flex-col items-center gap-4 p-6 text-center sm:p-7">
           <Eyebrow>
-            <span className="size-1.5 rounded-full bg-sky-500" />
-            Toolbelt
+            <span className="size-1.5 rounded-full bg-slate-400" />
+            Also working with
           </Eyebrow>
           <ul className="flex flex-wrap justify-center gap-2">
             {toolbelt.map((tool) => (

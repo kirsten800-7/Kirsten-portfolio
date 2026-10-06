@@ -18,12 +18,13 @@ import {
 type IconType = ComponentType<SVGProps<SVGSVGElement>>;
 
 export const profile = {
-  name: "K1rsten",
+  siteName: "Kirsten Portfolio",
+  name: "Kirsten",
   handle: "@itsk1rsten",
-  role: "Creative Developer & Digital Designer",
-  location: "Available worldwide · Remote",
+  role: "Designer and Front-End Developer",
+  location: "Remote · Working with clients worldwide",
   tagline:
-    "I design and build bright, fast, detail-obsessed digital experiences — interfaces, brands and little corners of the internet that feel good to use.",
+    "I design and build clean, considered interfaces — websites and digital products that stay legible, load fast and hold up over time.",
   email: "hello@itsk1rsten.com",
   formspreeEndpoint: "https://formspree.io/f/xyegeoqp",
 };
@@ -61,40 +62,40 @@ export const socialLinks: SocialLink[] = [
     handle: "@azters.gg",
     href: "https://www.instagram.com/azters.gg?stkn=MWl4dnQ4aG1kMHF5aw==",
     icon: InstagramIcon,
-    chipHover: "hover:text-pink-600",
-    cardHover: "group-hover:text-pink-600",
+    chipHover: "hover:text-slate-900",
+    cardHover: "group-hover:text-slate-900",
   },
   {
     label: "Discord",
-    handle: "Join the server",
+    handle: "Community server",
     href: "https://discord.gg/hbej3NQusB",
     icon: DiscordIcon,
-    chipHover: "hover:text-indigo-600",
-    cardHover: "group-hover:text-indigo-600",
+    chipHover: "hover:text-slate-900",
+    cardHover: "group-hover:text-slate-900",
   },
   {
     label: "Facebook",
-    handle: "Azter",
+    handle: "Kirsten",
     href: "https://www.facebook.com/share/1KB3gFQyKW/",
     icon: FacebookIcon,
-    chipHover: "hover:text-blue-600",
-    cardHover: "group-hover:text-blue-600",
+    chipHover: "hover:text-slate-900",
+    cardHover: "group-hover:text-slate-900",
   },
   {
     label: "guns.lol",
     handle: "itsk1rsten",
     href: "https://guns.lol/itsk1rsten",
     icon: GunsIcon,
-    chipHover: "hover:text-teal-600",
-    cardHover: "group-hover:text-teal-600",
+    chipHover: "hover:text-slate-900",
+    cardHover: "group-hover:text-slate-900",
   },
 ];
 
 export const stats = [
-  { value: "5+", label: "Years creating" },
-  { value: "60+", label: "Projects shipped" },
-  { value: "25+", label: "Happy clients" },
-  { value: "100%", label: "Light-mode loyal" },
+  { value: "5+", label: "Years of practice" },
+  { value: "60+", label: "Projects delivered" },
+  { value: "25+", label: "Clients and collaborators" },
+  { value: "4", label: "Core disciplines" },
 ];
 
 export interface SkillGroup {
@@ -108,14 +109,14 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend",
-    blurb: "Interfaces that feel instant and stay readable as they grow.",
+    blurb: "Interfaces that stay fast, legible and easy to extend.",
     icon: CodeXml,
     level: 94,
     items: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
   },
   {
     title: "Design",
-    blurb: "Layout, hierarchy and motion systems built around the product.",
+    blurb: "Layout, typography and motion systems built around the product.",
     icon: Palette,
     level: 88,
     items: ["Figma", "Design systems", "Prototyping", "Micro-interactions"],
@@ -125,11 +126,11 @@ export const skillGroups: SkillGroup[] = [
     blurb: "Data models and APIs that keep the interface honest.",
     icon: Server,
     level: 81,
-    items: ["Convex", "Node.js", "REST", "PostgreSQL", "Auth flows"],
+    items: ["Convex", "Node.js", "REST", "PostgreSQL", "Authentication"],
   },
   {
-    title: "Craft & Tooling",
-    blurb: "The unglamorous work that makes shipping feel calm.",
+    title: "Tooling and Craft",
+    blurb: "The unglamorous work that keeps delivery predictable.",
     icon: Layers,
     level: 85,
     items: ["Git", "CI/CD", "Vercel", "Performance", "Accessibility"],
@@ -165,24 +166,24 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Azter Hub",
-    category: "Brand & Web",
+    category: "Brand and Web",
     year: "2026",
     description:
-      "A frosted-glass link hub that pulls every social profile into one calm, one-screen landing page.",
+      "A single, uncluttered link hub that gathers every social profile into one calm landing page.",
     tags: ["React", "Tailwind", "Motion"],
     icon: Sparkles,
-    accent: "from-sky-300/60 to-indigo-300/50",
+    accent: "from-sky-100/80 to-slate-100/50",
     href: "https://guns.lol/itsk1rsten",
   },
   {
     title: "Studio Dashboard",
-    category: "Product UI",
+    category: "Product Interface",
     year: "2025",
     description:
-      "Analytics workspace for a small creative studio — live charts, granular filters and a keyboard-first flow.",
+      "An analytics workspace for a small studio: live figures, focused filters and a keyboard-first flow.",
     tags: ["TypeScript", "Convex", "Recharts"],
     icon: Braces,
-    accent: "from-teal-200/60 to-sky-300/50",
+    accent: "from-slate-200/80 to-slate-100/50",
     href: "#projects",
   },
   {
@@ -190,21 +191,21 @@ export const projects: Project[] = [
     category: "Design System",
     year: "2025",
     description:
-      "An open component kit for bright glassmorphism: layered panels, edge highlights and restrained cool color.",
-    tags: ["Figma", "Design System", "Docs"],
+      "An open component kit for bright glass surfaces: layered panels, edge highlights and a restrained cool palette.",
+    tags: ["Figma", "Design System", "Documentation"],
     icon: Palette,
-    accent: "from-indigo-200/60 to-cyan-200/50",
+    accent: "from-indigo-100/70 to-slate-100/50",
     href: "#projects",
   },
   {
     title: "Loopwave",
-    category: "Side project",
+    category: "Side Project",
     year: "2024",
     description:
-      "A tiny audio-visual toy where every click paints translucent ripples in real time on a shared canvas.",
+      "A small audio-visual experiment where each interaction paints translucent ripples onto a shared canvas.",
     tags: ["Canvas", "Web Audio", "Vite"],
     icon: Layers,
-    accent: "from-cyan-200/60 to-blue-300/50",
+    accent: "from-cyan-100/70 to-slate-100/50",
     href: "#projects",
   },
 ];

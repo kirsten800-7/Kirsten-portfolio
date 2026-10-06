@@ -61,10 +61,10 @@ export function ContactSection() {
         eyebrow="Contact"
         title={
           <>
-            Have an idea? <span className="text-cool">Let&apos;s make it real</span>
+            Let&apos;s talk about <span className="text-cool">the work</span>
           </>
         }
-        description="Tell me a little about the project and I'll get back to you within a couple of days. Collabs, brand work and small builds are all welcome."
+        description="Send a short brief and I'll reply within two business days. Contract work, collaborations and focused consulting are all welcome."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -163,7 +163,7 @@ export function ContactSection() {
                     className="flex items-center gap-2 text-sm font-medium text-emerald-700"
                   >
                     <CheckCircle2 className="size-4" />
-                    Thanks — your message is on its way.
+                    Message received — I&apos;ll be in touch shortly.
                   </p>
                 ) : null}
 
@@ -185,7 +185,7 @@ export function ContactSection() {
           <div className="grid gap-6">
             <GlassCard className="p-6 sm:p-7">
               <p className="text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
-                Direct
+                Email
               </p>
               <a
                 href={`mailto:${profile.email}`}
@@ -199,19 +199,19 @@ export function ContactSection() {
                     {profile.email}
                   </span>
                   <span className="block text-xs text-slate-500">
-                    Best for quick questions
+                    Best for direct inquiries
                   </span>
                 </span>
               </a>
               <p className="mt-4 text-sm leading-6 text-slate-600">
-                Prefer socials? I&apos;m most active on Discord and Instagram —
-                the links below go straight to my profiles.
+                Prefer social platforms? I&apos;m most active on Discord and
+                Instagram, and the links below go straight to my profiles.
               </p>
             </GlassCard>
 
             <div>
               <p className="mb-3 px-1 text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
-                Social
+                Elsewhere
               </p>
               <SocialCards />
             </div>

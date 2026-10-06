@@ -1,4 +1,4 @@
-import { ArrowUp, Mail } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GlassCard } from "./primitives";
 import { SocialChips } from "./SocialLinks";
@@ -13,12 +13,12 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-[1.15fr_0.85fr]">
           <div>
             <a href="#home" className="flex items-center gap-3">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400/90 to-indigo-500/90 text-lg font-bold text-white shadow-[0_14px_30px_-14px_rgba(49,86,180,0.9),inset_0_1px_0_rgba(255,255,255,0.5)]">
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-slate-900 text-lg font-semibold text-white shadow-[0_14px_30px_-16px_rgba(15,23,42,0.9)]">
                 {profile.name.charAt(0)}
               </span>
               <span className="leading-tight">
-                <span className="block text-base font-semibold text-slate-900">
-                  {profile.name}
+                <span className="block text-base font-semibold tracking-tight text-slate-900">
+                  {profile.siteName}
                 </span>
                 <span className="block text-xs text-slate-500">
                   {profile.role}
@@ -26,9 +26,9 @@ export function SiteFooter() {
               </span>
             </a>
             <p className="mt-5 max-w-sm text-sm leading-6 text-slate-600">
-              Thanks for scrolling all the way down. If something here caught
-              your eye, the fastest way to reach me is the contact form — or
-              any of the profiles below.
+              The personal site of {profile.name} — a designer and front-end
+              developer. Selected work, background and contact details, all in
+              one place.
             </p>
             <SocialChips className="mt-6" size="sm" />
           </div>
@@ -49,9 +49,7 @@ export function SiteFooter() {
                       )}
                     >
                       {item.label}
-                      <span className="text-xs text-slate-400 transition group-hover:text-slate-600">
-                        ↗
-                      </span>
+                      <ArrowUpRight className="size-3.5 text-slate-400 transition group-hover:text-slate-700" />
                     </a>
                   </li>
                 ))}
@@ -60,7 +58,7 @@ export function SiteFooter() {
 
             <div>
               <p className="text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
-                Say hello
+                Contact
               </p>
               <a
                 href={`mailto:${profile.email}`}
@@ -82,9 +80,10 @@ export function SiteFooter() {
 
         <div className="mt-9 flex flex-col gap-3 border-t border-white/60 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {profile.name} ({profile.handle}). All rights reserved.
+            © {year} {profile.siteName} — {profile.name} ({profile.handle}). All
+            rights reserved.
           </p>
-          <p>Designed &amp; built with React, Tailwind CSS and light-mode love.</p>
+          <p>Designed and built with React and Tailwind CSS.</p>
         </div>
       </GlassCard>
     </footer>

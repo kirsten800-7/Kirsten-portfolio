@@ -10,11 +10,10 @@ export function ProjectsSection() {
         eyebrow="Projects"
         title={
           <>
-            A few things I&apos;ve built{" "}
-            <span className="text-cool">and actually shipped</span>
+            Selected work, <span className="text-cool">built end to end</span>
           </>
         }
-        description="Selected work spanning brand pages, product dashboards and small experiments. Most of it starts as a sketch and ends up as a live link."
+        description="A short selection spanning brand pages, product interfaces and small experiments. Each piece started as a sketch and finished as a live link."
       />
 
       <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -42,7 +41,7 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs font-medium tracking-[0.14em] text-slate-500 uppercase">
+                  <p className="text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
                     {project.category}
                   </p>
                   <h3 className="mt-2 text-xl font-semibold text-slate-900">
@@ -71,7 +70,7 @@ export function ProjectsSection() {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-slate-800 transition hover:text-sky-600"
+                    className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-slate-700 underline decoration-transparent underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-300"
                   >
                     View project
                     <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

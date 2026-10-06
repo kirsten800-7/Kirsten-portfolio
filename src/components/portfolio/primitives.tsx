@@ -13,7 +13,7 @@ export function GlassCard({
 }: ComponentProps<"div"> & { hover?: boolean }) {
   return (
     <div
-      className={cn("glass rounded-3xl", hover && "glass-hover", className)}
+      className={cn("glass rounded-2xl", hover && "glass-hover", className)}
       {...props}
     />
   );
@@ -32,10 +32,10 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 26 }}
+      initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.65, delay, ease: EASE }}
+      transition={{ duration: 0.55, delay, ease: EASE }}
     >
       {children}
     </motion.div>
@@ -73,7 +73,7 @@ export function Eyebrow({
   return (
     <span
       className={cn(
-        "glass-soft inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium tracking-[0.14em] text-slate-600 uppercase",
+        "glass-soft inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium tracking-[0.16em] text-slate-500 uppercase",
         className,
       )}
     >
@@ -101,7 +101,7 @@ export function SectionHeading({
       )}
     >
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+      <h2 className="text-3xl font-semibold tracking-[-0.02em] text-slate-900 sm:text-[2.5rem]">
         {title}
       </h2>
       {description ? (

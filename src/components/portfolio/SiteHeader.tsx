@@ -64,12 +64,10 @@ export function SiteHeader() {
         >
           <Monogram />
           <span className="hidden leading-tight sm:block">
-            <span className="block text-sm font-semibold text-slate-900">
-              {profile.name}
+            <span className="block text-sm font-semibold tracking-tight text-slate-900">
+              {profile.siteName}
             </span>
-            <span className="block text-xs text-slate-500">
-              {profile.handle}
-            </span>
+            <span className="block text-xs text-slate-500">{profile.role}</span>
           </span>
         </a>
 
@@ -99,7 +97,7 @@ export function SiteHeader() {
             href="#contact"
             className="hidden rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-[0_10px_24px_-12px_rgba(15,23,42,0.9)] transition duration-300 hover:-translate-y-0.5 hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-sky-500/60 focus-visible:outline-none sm:inline-flex"
           >
-            Let&apos;s talk
+            Contact
           </a>
           <button
             type="button"
@@ -144,8 +142,8 @@ export function SiteHeader() {
               ))}
             </nav>
             <div className="mt-4 border-t border-white/60 pt-4">
-              <p className="mb-3 text-xs font-medium tracking-[0.14em] text-slate-500 uppercase">
-                Find me
+              <p className="mb-3 text-xs font-medium tracking-[0.16em] text-slate-500 uppercase">
+                Elsewhere
               </p>
               <SocialChips size="sm" />
             </div>
